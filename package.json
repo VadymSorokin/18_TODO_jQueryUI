@@ -1,0 +1,19 @@
+{
+  "name": "18_jquery",
+  "version": "1.0.0",
+  "description": "HW 18 TODO list with jQueryUI",
+  "main": "jquery-ui.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VadymSorokin/18_jQueryUI.git"
+  },
+  "author": "is Majesty Vadym Sorokin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VadymSorokin/18_jQueryUI/issues"
+  },
+  "homepage": "https://github.com/VadymSorokin/18_jQueryUI"
+}

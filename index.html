@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> 18 TO DO </title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+	<link rel="stylesheet" href="./css/jquery-ui.min.css">
+	<link rel="stylesheet" href="./css/styles.css">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
+	</script>
+	<script src="./jquery-ui.min.js"></script>
+</head>
+
+<body>
+	<div class="container ">
+		<i class="button input-button js-input-button far fa-list-alt "> add task</i>
+		<div class="js-modal" title="add a task">
+			<div class="input-wrap">
+				<form class="form-input" name="group">
+					<input type="text" name="group" class="input-issue" size="5" placeholder="input text here...">
+					<input type="checkbox" name="group" id="check-status">
+					<i class="button  input-button js-add-input-button far fa-list-alt"></i>
+				</form>
+			</div>
+		</div>
+		<div class="js-modal-edit" title="edit task">
+			<form class="form-input-edit" name="edit">
+				<input name="input-edit-item" class="input-edit-issue" type="text" size="23"
+					placeholder="input text here...">
+				<input type="checkbox" name="group-edit-checkbox" id="edit-checkbox">
+				<i name="groupedit-button" class="button  input-button js-confirm-edit-button far fa-list-alt"></i>
+			</form>
+		</div>
+		<ul class="list js-list"></ul>
+	</div>
+	<script src="./script.js"></script>
+</body>
+
+</html>
