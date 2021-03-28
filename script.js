@@ -32,8 +32,6 @@ function init() {
 	confirmEditEventListener()
 }
 //EVENT LISTENERS
-
-
 function inputModalButtonEventListener() {
 	$modalButton.on('click', () => {
 		$modal.dialog('open')
@@ -72,9 +70,7 @@ function confirmEditEventListener() {
 		$modalEdit.dialog('close');
 	})
 }
-
 //REQUESTS
-
 function sendGetListRequest() {
 	return fetch('https://jsonplaceholder.typicode.com/todos')
 		.then((response) => response.json())
@@ -125,9 +121,7 @@ function sendGetIssueRequest(idIssue) {
 			})
 		})
 }
-
 //RENDER 
-
 function renderList(issues) {
 	const listItems = issues.map(issue => toDoItem(issue));
 	$list.append(listItems);
@@ -140,9 +134,7 @@ function renderIssue(issue) {
 function renderEditIssue(issue) {
 	$list.prepend(toDoItem(issue));
 }
-
 //LOGIC
-
 function getListItems() {
 	const listRequest = sendGetListRequest();
 	listRequest.then((issues) => renderList(issues))
@@ -161,11 +153,9 @@ function createEditedIssue() {
 	const issue = getFormEditData();
 	sendPatchEditRequest(issue)
 		.then((issue) => {
-			console.log(issue.completed);
 			const $paragraph = $(`li[data-id="${parentId}"] > p`);
 			editValue[1].checked ? $paragraph.addClass(`done`) : $paragraph.removeClass(`done`);
 			$paragraph.text(issue.title);
-			//$paragraph.addClass(`${doneClass}`);
 		})
 }
 
@@ -185,7 +175,6 @@ function getFormEditData() {
 		completed: editValue[1].checked,
 	}
 }
-
 
 function clearInput() {
 	inputValue.reset();
