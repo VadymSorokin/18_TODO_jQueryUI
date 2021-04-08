@@ -19,10 +19,18 @@ function init() {
 	$modalEdit.dialog({
 		autoOpen: false,
 		modal: true,
+		hide: {
+			effect: "drop",
+			duration: 800
+		}
 	});
 	$modal.dialog({
 		autoOpen: false,
 		modal: true,
+		hide: {
+			effect: "drop",
+			duration: 800
+		}
 	});
 	getListItems();
 	inputButtonEventListener();
